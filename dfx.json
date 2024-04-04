@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "caesarcipher_backend": {
+      "declarations": {
+        "node_compatibility": true
+      },
+      "main": "src/caesarcipher_backend/main.mo",
+      "type": "motoko"
+    },
+    "caesarcipher_frontend": {
+      "dependencies": [
+        "caesarcipher_backend"
+      ],
+      "source": [
+        "src/caesarcipher_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "caesarcipher_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
