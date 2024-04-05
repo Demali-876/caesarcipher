@@ -4,7 +4,7 @@ actor CaesarCipher{
     message: Text;
     shift : Nat;
     sensitivity : CaseSensitivity;
-
+    foreignChar : ForeignCharacters;
 
   };
   public type CaseSensitivity={
