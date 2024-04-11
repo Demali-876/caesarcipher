@@ -1,4 +1,3 @@
-
 actor CaesarCipher{
   public type Message={
     message: Text;
@@ -16,8 +15,9 @@ actor CaesarCipher{
     #Include;
     #Exclude;
   };
-    public func encode(message : Text, shift : Nat): async Text{
-      return message;
-
+    public func encode(message: Message): async Text{
+      
+      return encodedMessage;
     };
+
 };
