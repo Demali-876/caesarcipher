@@ -1,6 +1,6 @@
 <script>
   import "../index.scss";
-  import { backend } from '$lib/canisters'; 
+  import { backend } from '$lib/canisters';
 
   let message = '';
   let shift = 0;
@@ -50,7 +50,7 @@
 <main>
   <div class="brick viewer viewer-text" role="region" aria-label="Text viewer">
     <header class="brick__header">
-      <ul class="brick__actions">
+      <ul class="brick__actions"> 
         <li class="brick__action-item">
           <span class="brick__action brick__action--active">View</span>
         </li>
@@ -126,49 +126,9 @@
                                 <circle cx="8" cy="14" r="1.5"></circle></svg>
                               </button>
                           </header>
-                          <div class="brick__settings">
-                            <div class="form">
-                            </div>
-                          </div>
                           <div class="brick__content">
                             <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;">{output}
-                            </textarea></div><footer class="brick__status brick__status--hidden">
-                              <div class="brick__status-icon">
-                              </div><div class="brick__status-message">
-                              </div></footer></div></div>
-                              <footer class="app__footer footer">
-                                <div class="container">
-                                  <div class="footer__inner">
-                                    <h2 class="footer__brand"><a href="/">cryptii</a></h2>
-                                    <p class="footer__description">
-                                      Web app offering modular conversion, encoding and encryption online. Translations are done in the browser without any server interaction. This is an Open Source project, code licensed MIT.
-                                      By <a href="https://wierk.lu/" target="_blank" rel="noopener">Wierk</a>.
-                                    </p>
-                                    <ul class="footer__link-list link-list">
-                                      <li class="link-list__item">
-                                            <a class="link-list__link" href="https://ciphereditor.com/about" target="_blank" rel="noopener">
-                                              About
-                                            </a>
-                                          </li><li class="link-list__item">
-                                            <a class="link-list__link" href="https://twitter.com/cryptii" target="_blank" rel="noopener">
-                                              Twitter
-                                            </a>
-                                          </li><li class="link-list__item">
-                                            <a class="link-list__link" href="https://github.com/cryptii/cryptii" target="_blank" rel="noopener">
-                                              GitHub
-                                            </a>
-                                          </li><li class="link-list__item">
-                                            <a class="link-list__link" href="https://ciphereditor.com/legal-notice" target="_blank" rel="noopener">
-                                              Legal notice
-                                            </a>
-                                          </li><li class="link-list__item">
-                                            <a class="link-list__link" href="https://ciphereditor.com/explore/caesar-cipher?utm_campaign=cryptii_try_new_experience&amp;utm_source=cryptii&amp;utm_medium=referral" target="_blank" rel="noopener">
-                                              Try ciphereditor
-                                            </a>
-                                          </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </footer>
+                            </textarea>
+                          </div>
 </main>
 
