@@ -2,7 +2,7 @@
 .link-list, .footer__description > a, button,
 input,
 select,
-textarea, .header__badge, .menu__button, .content, .footer__brand, .footer__description, .pipe__description, .modal-library__category-title, .modal-library__brick, .brick__status, .field__message, .field-enum--radio .field-enum__option-label {
+textarea, .header__badge, .menu__button, .content, .footer__brand, .footer__description, .pipe__description, .brick__status, .field__message, .field-enum--radio .field-enum__option-label {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -20,12 +20,7 @@ textarea, .header__badge, .menu__button, .content, .footer__brand, .footer__desc
   font-size: 32px;
 }
 
-.featured__copy, #carbonads .carbon-text, .featured__disclamer, #carbonads .carbon-poweredby {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
-}
+
 
 .pipe__title, .page__title {
   font-family: Roboto, sans-serif;
@@ -34,7 +29,7 @@ textarea, .header__badge, .menu__button, .content, .footer__brand, .footer__desc
   line-height: 1.5;
 }
 
-.modal__header, .content h2, .content h3, .content h4, .content h5, .content h6 {
+.content h2, .content h3, .content h4, .content h5, .content h6 {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -78,7 +73,7 @@ textarea, .header__badge, .menu__button, .content, .footer__brand, .footer__desc
   line-height: 1.5;
 }
 
-.featured, #carbonads, .modal-library__brick, .brick, .field__message {
+.featured, #carbonads, .brick, .field__message {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
   border-radius: 2px;
   background: #ffffff;
@@ -90,20 +85,6 @@ textarea, .header__badge, .menu__button, .content, .footer__brand, .footer__desc
   background: #ffffff;
 }
 
-.modal__dialog {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
-  border-radius: 4px;
-  background: #ffffff;
-}
-
-/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
-/* Document
-       ========================================================================== */
-/**
-     * 1. Correct the line height in all browsers.
-     * 2. Prevent adjustments of font size after orientation changes in
-     *    IE on Windows Phone and in iOS.
-     */
 html {
   line-height: 1.15;
   /* 1 */
@@ -113,18 +94,10 @@ html {
   /* 2 */
 }
 
-/* Sections
-       ========================================================================== */
-/**
-     * Remove the margin in all browsers (opinionated).
-     */
 body {
   margin: 0;
 }
 
-/**
-     * Add the correct display in IE 9-.
-     */
 article,
 aside,
 footer,
@@ -290,23 +263,6 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-       ========================================================================== */
-/**
-     * Add the correct display in IE 9-.
-     */
-audio,
-video {
-  display: inline-block;
-}
-
-/**
-     * Add the correct display in iOS 4-7.
-     */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
 
 /**
      * Remove the border on images inside links in IE 10-.
@@ -324,23 +280,15 @@ svg:not(:root) {
 
 /* Forms
        ========================================================================== */
-/**
-     * 1. Change the font styles in all browsers (opinionated).
-     * 2. Remove the margin in Firefox and Safari.
-     */
 button,
 input,
 optgroup,
 select,
 textarea {
   font-family: sans-serif;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
 
 /**
@@ -350,10 +298,6 @@ button {
   overflow: visible;
 }
 
-/**
-     * Remove the inheritance of text transform in Edge, Firefox, and IE.
-     * 1. Remove the inheritance of text transform in Firefox.
-     */
 button,
 select {
   /* 1 */
@@ -501,19 +445,9 @@ progress {
 textarea {
   overflow: auto;
 }
-
-/* Interactive
-       ========================================================================== */
-/*
-     * Add the correct display in Edge, IE, and Firefox.
-     */
 details {
   display: block;
 }
-
-/*
-     * Add the correct display in all browsers.
-     */
 summary {
   display: list-item;
 }
@@ -789,238 +723,6 @@ img {
   }
 }
 
-.modal-visible {
-  overflow: hidden;
-}
-
-.modal {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  visibility: hidden;
-  outline: 0;
-  transition-property: visibility;
-  transition-duration: 0.6s;
-}
-
-.modal--visible {
-  visibility: visible;
-}
-
-.modal__backdrop {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.4s;
-  transition-delay: 0.2s;
-}
-
-.modal--visible .modal__backdrop {
-  opacity: 0.4;
-  transition-delay: 0s;
-}
-
-.modal__scrollable {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-.modal__outer {
-  display: block;
-  position: relative;
-  width: auto;
-  margin: 0 auto;
-  padding: 0 8px;
-  transform: translate(0, -140px);
-  transition-property: transform;
-  transition-duration: 0.4s;
-  pointer-events: none;
-}
-
-.modal--visible .modal__outer {
-  transform: none;
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .modal__outer {
-    max-width: 552px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  .modal__outer {
-    max-width: 568px;
-    margin-bottom: 24px;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  .modal__outer {
-    max-width: 584px;
-    margin-bottom: 32px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .modal__outer {
-    max-width: 584px;
-    margin-bottom: 32px;
-  }
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .modal__outer {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-}
-
-.modal__dialog {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  background: #ffffff;
-  pointer-events: auto;
-  outline: 0;
-  overflow: hidden;
-  transition-property: height;
-  transition-duration: 0.4s;
-}
-
-@media screen and (min-width: 768px) {
-  .modal__dialog {
-    border-radius: 0 0 4px 4px;
-  }
-}
-
-.modal__header {
-  position: relative;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .modal__header {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  .modal__header {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  .modal__header {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .modal__header {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-.modal__btn-close {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0 24px;
-  font-size: 0;
-  color: #90999e;
-}
-
-.modal__btn-close:hover {
-  color: #272727;
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .modal__btn-close {
-    padding-right: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  .modal__btn-close {
-    padding-right: 24px;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  .modal__btn-close {
-    padding-right: 32px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .modal__btn-close {
-    padding-right: 32px;
-  }
-}
-
-.modal__btn-close svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
-.modal__content {
-  background: #f2f4f6;
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .modal__content {
-    padding: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  .modal__content {
-    padding: 24px;
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  .modal__content {
-    padding: 32px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .modal__content {
-    padding: 32px;
-  }
-}
 
 .menu {
   display: block;
@@ -1637,53 +1339,6 @@ img {
   visibility: visible;
 }
 
-.modal-library__categories {
-  margin: -12px 0;
-}
-
-.modal-library__category {
-  padding: 12px 0;
-}
-
-.modal-library__category-title {
-  display: block;
-  padding-bottom: 10px;
-  color: #90999e;
-}
-
-.modal-library__bricks {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: -4px;
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-  .modal-library__bricks {
-    flex-direction: column;
-  }
-}
-
-.modal-library__brick {
-  display: block;
-  margin: 4px;
-  padding: 0 12px;
-  line-height: 40px;
-}
-
-.modal-library__brick::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 8px 1px 0;
-  border-radius: 4px;
-  background: #00b1d1;
-}
-
-.modal-library__brick--encoder::before {
-  background: #ff9900;
-}
 
 .form {
   display: flex;

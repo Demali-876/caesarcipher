@@ -51,32 +51,11 @@
     <div class="header__inner">
       <div class="header__item">
         <a class="header__brand" href="/">
-          <svg width="114" height="36" viewBox="0 0 114 36" fill="none" aria-labelledby="app_logo">
-<title id="app_logo">cryptii</title>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M102.803 7.40977C101.817 7.40977 101.005 8.22217 101.005 9.20866C101.005 10.1951 101.817 11.0075 102.803 11.0075C103.79 11.0075 104.602 10.1951 104.602 9.20866C104.602 8.22217 103.79 7.40977 102.803 7.40977ZM93.9832 10.0791H96.9426V12.8645H99.2057V15.5048H96.9426V23.8319H93.9832V15.5048H91.9231V12.8645H93.9832V10.0791ZM63.9533 12.6323C63.402 12.6323 62.8798 12.7774 62.3575 13.0385C61.8353 13.2997 61.4 13.6768 61.0519 14.1411C60.9387 14.2543 60.8431 14.4028 60.7515 14.5454L60.7514 14.5454L60.7512 14.5457L60.7511 14.5459C60.7254 14.5858 60.7001 14.6253 60.6747 14.6633L60.6167 12.8644H57.7733V23.8319H60.7327V18.1451C60.7327 17.7969 60.7907 17.4777 60.9068 17.1876C61.0229 16.8974 61.1969 16.6363 61.4 16.4332C61.6031 16.2301 61.8643 16.056 62.1254 15.94C62.4155 15.8239 62.7057 15.7659 63.0539 15.7659C63.315 15.7659 63.5471 15.7949 63.7792 15.8529C64.0113 15.911 64.2144 15.998 64.3595 16.085L65.1429 12.8644C64.9978 12.8064 64.7947 12.7484 64.5916 12.7194C64.5279 12.7103 64.4642 12.6983 64.3996 12.6862C64.2582 12.6597 64.1126 12.6323 63.9533 12.6323ZM50.0845 15.6208C50.5197 15.3597 51.0129 15.2146 51.5932 15.2146C51.9414 15.2146 52.2896 15.2726 52.6377 15.3887C52.9859 15.5048 53.276 15.6788 53.5952 15.911C53.8853 16.1141 54.1175 16.3752 54.3206 16.6363L55.9454 14.6924C55.4811 14.054 54.8428 13.5608 54.0304 13.2126C53.218 12.8645 52.3186 12.6614 51.3321 12.6614C50.2876 12.6614 49.3301 12.9225 48.5177 13.4157C47.6763 13.909 47.038 14.5763 46.5447 15.4467C46.0805 16.3172 45.8194 17.2746 45.8194 18.3772C45.8194 19.4797 46.0515 20.4372 46.5447 21.3076C47.009 22.1781 47.6763 22.8454 48.5177 23.3386C49.3591 23.8319 50.2876 24.093 51.3321 24.093C52.2605 24.093 53.131 23.9189 53.9724 23.5417C54.8138 23.1645 55.4521 22.7003 55.9164 22.091L54.3206 20.1471C54.0884 20.4372 53.8273 20.6983 53.5372 20.9014C53.247 21.1045 52.9569 21.2496 52.6377 21.3657C52.5399 21.3745 52.4393 21.3862 52.3368 21.398C52.105 21.4248 51.8636 21.4527 51.6222 21.4527C51.071 21.4527 50.5777 21.3076 50.1425 21.0465C49.7073 20.7564 49.3591 20.4082 49.098 19.9149C48.8369 19.4507 48.7208 18.9284 48.7208 18.3482C48.7208 17.7389 48.8369 17.1876 49.098 16.7234C49.3011 16.2591 49.6493 15.8819 50.0845 15.6208ZM72.1372 19.594C72.1644 19.5107 72.1924 19.4246 72.2224 19.3347L74.5145 12.8935H77.8802L73.2669 23.8609L71.381 28.6192H68.3925L70.4525 23.8029L65.4911 12.8645H68.8277L71.497 19.1896C71.5932 19.3819 71.6694 19.5941 71.7587 19.8427C71.7772 19.8942 71.7963 19.9472 71.8162 20.002L71.9033 20.2631C71.9893 20.048 72.0594 19.8328 72.1372 19.594ZM88.2963 13.3867C87.542 12.8935 86.7006 12.6614 85.7431 12.6614C85.1338 12.6614 84.5245 12.7774 83.9732 13.0095C83.3929 13.2416 82.9287 13.5608 82.5515 13.909C82.4645 13.996 82.4064 14.0831 82.3484 14.1701L82.2904 12.8354H79.447V28.3871H82.4064V22.5843C82.4161 22.5939 82.4226 22.6036 82.429 22.6133C82.4419 22.6326 82.4548 22.652 82.4935 22.6713C82.8997 23.0775 83.3639 23.3967 83.9442 23.6288C84.5245 23.8609 85.1338 24.006 85.7721 24.006C86.7296 24.006 87.571 23.7738 88.3254 23.2806C89.0797 22.7874 89.66 22.12 90.0952 21.2496C90.5304 20.3792 90.7335 19.4217 90.7335 18.3191C90.7335 17.2166 90.5304 16.2301 90.0952 15.3887C89.631 14.5473 89.0507 13.88 88.2963 13.3867ZM87.4839 20.002C87.2518 20.4662 86.9327 20.8434 86.4975 21.1045C86.0912 21.3657 85.598 21.5107 85.0758 21.5107C84.5245 21.5107 84.0312 21.3657 83.625 21.1045C83.2188 20.8434 82.8997 20.4662 82.6385 20.002C82.4064 19.5378 82.2904 18.9865 82.2904 18.3482C82.2904 17.7389 82.4064 17.1876 82.6385 16.6943C82.8707 16.2301 83.1898 15.8529 83.625 15.5918C84.0312 15.3307 84.5245 15.2146 85.0758 15.2146C85.627 15.2146 86.1203 15.3597 86.5265 15.6208C86.9327 15.8819 87.2518 16.2591 87.4839 16.7234C87.7161 17.1876 87.8321 17.7389 87.8321 18.3482C87.8611 18.9575 87.7451 19.5087 87.4839 20.002ZM104.283 12.8645H101.353V23.8319H104.283V12.8645ZM107.707 12.8645H110.637V23.8319H107.707V12.8645ZM110.957 9.23765C110.957 10.2241 110.144 11.0365 109.158 11.0365C108.171 11.0365 107.359 10.2241 107.359 9.23765C107.359 8.25117 108.171 7.43877 109.158 7.43877C110.144 7.43877 110.957 8.25117 110.957 9.23765Z" fill="#002F6D"></path>
-<path d="M33 25H25V33H33V25Z" fill="#159AED"></path>
-<path d="M17.9856 27.1661L15.8484 25H14V26.8484L16.1661 28.9856L14 31.1516V33H15.8484L17.9856 30.8339L20.1516 33H22V31.1516L19.8339 28.9856L22 26.8484V25H20.1516L17.9856 27.1661Z" fill="#159AED"></path>
-<path d="M7 24.535C4.5361 24.535 2.536 26.5421 2.536 28.9855C2.536 31.4288 4.5361 33.465 7 33.465C9.46389 33.465 11.464 31.4579 11.464 28.9855C11.464 26.513 9.43491 24.535 7 24.535Z" fill="#159AED"></path>
-<path d="M7.01444 19.8339L9.15162 22H11V20.1516L8.83393 17.9856L11 15.8484V14H9.15162L7.01444 16.1661L4.84838 14H3V15.8484L5.16606 17.9856L3 20.1516V22H4.84838L7.01444 19.8339Z" fill="#159AED"></path>
-<path d="M29 2.54275C26.5361 2.54275 24.536 4.54982 24.536 6.9932C24.536 9.43659 26.5361 11.4727 29 11.4727C31.4639 11.4727 33.464 9.46568 33.464 6.9932C33.464 4.52073 31.4349 2.54275 29 2.54275Z" fill="#159AED"></path>
-<path d="M22.0117 3H13.9884V11.0155H22.0117V3Z" fill="#159AED"></path>
-</svg>
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <img width="125" height="200"  aria-labelledby="app_logo" src="logo.svg">
         </a>
       </div>
-      <div class="header__flexible-space"></div><div class="header__featured">
-  <script src="https://cdn.carbonads.com/carbon.js?serve=CKYILKQL&amp;placement=cryptiicom" async="" id="_carbonads_js"></script><div id="carbonads"><span>
-
-<span class="carbon-wrap">
-<a href="https://srv.carbonads.net/ads/click/x/GTND427JCKBDE27MCEB4YKQUC67IE27WCKAIVZ3JCAYIC53WCYAIC2QKCWYD427JCE7I427NC67D42QMC6ADV27KC6SI4K7WFTADVK3EHJNCLSIZ" class="carbon-img" target="_blank" rel="noopener sponsored">
-<img src="https://srv.carbonads.net/static/30242/d2ce9d569f5af686a03dfbebb343f38eb801fe67" alt="ads via Carbon" border="0" height="100" width="130" data-no-statview="no" style="max-width: 130px;">
-</a>
-<a href="https://srv.carbonads.net/ads/click/x/GTND427JCKBDE27MCEB4YKQUC67IE27WCKAIVZ3JCAYIC53WCYAIC2QKCWYD427JCE7I427NC67D42QMC6ADV27KC6SI4K7WFTADVK3EHJNCLSIZ" class="carbon-text" target="_blank" rel="noopener sponsored">
-Your new development career awaits. Check out the latest listings.
-</a>
-</span>
-<a href="http://carbonads.net/?utm_source=cryptiicom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a>
-</span></div>
-</div>
+      
 
     </div>
   </header>
@@ -86,15 +65,11 @@ Your new development career awaits. Check out the latest listings.
       <div class="container">
         <h1 class="pipe__title">Caesar cipher: Encode and decode online</h1>
         <p class="pipe__description">Method in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. The method is named after Julius Caesar, who used it in his private correspondence.</p>
-
-        <!-- Open in ciphereditor badge -->
         <div class="badge">
             <a class="badge__link" href="https://ciphereditor.com/explore/caesar-cipher?utm_campaign=badge_open_in_ciphereditor&amp;utm_source=cryptii&amp;utm_medium=referral" target="_blank" rel="noopener">
-              <img class="badge__image" alt="Open in ciphereditor" width="196" height="56" src="https://cdn.ciphereditor.com/assets/images/badge-open-in-ciphereditor-light.svg" loading="lazy">
+              <img class="badge__image" alt="internet computer" width="196" height="56" src="logo2.svg" loading="lazy">
             </a>
           </div>
-
-        <!-- Related pipes -->
         <ul class="pipe__link-list link-list">
           <li class="link-list__item">
               <a class="link-list__link" href="/pipes/decimal-text">
@@ -108,59 +83,159 @@ Your new development career awaits. Check out the latest listings.
               <a class="link-list__link" href="/pipes/enigma-decoder">
                 Enigma decoder
               </a>
-            </li><li class="link-list__item">
-              <a class="link-list__link" href="/pipes/text-to-binary">
-                Text to binary
-              </a>
-            </li><li class="link-list__item">
-              <a class="link-list__link" href="/pipes/commercial-enigma">
-                Commercial Enigma
-              </a>
-            </li>
         </ul>
       </div>
     </header>
-
-    <!-- Pipe data -->
-    <script type="application/vnd.cryptii.pipe+json" data-cryptii-pipe="true">{"$schema":"https://cryptii.com/schemas/pipe.json","id":1391872445,"url":"/pipes/caesar-cipher","title":"Caesar cipher: Encode and decode online","description":"Method in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. The method is named after Julius Caesar, who used it in his private correspondence.","items":[{"name":"text","title":"Plaintext"},{"name":"caesar-cipher"},{"name":"text","title":"Ciphertext"}],"content":{"data":"If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out."},"createdAt":1517593496,"updatedAt":1558258847,"slug":"caesar-cipher","shortTitle":"Caesar cipher","nextUrl":"https://ciphereditor.com/explore/caesar-cipher"}</script>
-
-    <!-- App script -->
-    <script async="" src="https://cdn.cryptii.com/releases/v4.0.9/script/cryptii.js" data-cryptii-init="true"></script>
     
-  <div class="pipe__scrollable"><div class="pipe__content"><button class="pipe__part-pipe"><div class="pipe__btn-add">Add encoder or viewer</div><div class="pipe__drop-handle"></div></button><div class="pipe__part-brick pipe__part-brick--viewer" draggable="true"><div class="brick viewer viewer-text" role="region" aria-label="Text viewer"><header class="brick__header"><ul class="brick__actions"><li class="brick__action-item"><span class="brick__action brick__action--active">View</span></li></ul><button class="brick__title"><h3 class="brick__title-inner">Plaintext</h3><div class="brick__title-caret"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg></div></button><button class="brick__btn-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="2" r="1.5"></circle><circle cx="8" cy="8" r="1.5"></circle><circle cx="8" cy="14" r="1.5"></circle></svg></button></header><div class="brick__settings"><div class="form"></div></div><div class="brick__content"><textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;"></textarea></div><footer class="brick__status brick__status--hidden"><div class="brick__status-icon"></div><div class="brick__status-message"></div></footer></div></div><button class="pipe__part-pipe"><div class="pipe__btn-add">Add encoder or viewer</div><div class="pipe__drop-handle"></div></button><div class="pipe__part-brick pipe__part-brick--encoder" draggable="true"><div class="brick encoder" role="region" aria-label="Caesar cipher encoder"><header class="brick__header"><ul class="brick__actions"><li class="brick__action-item"><a class="brick__action brick__action--active" href="#" draggable="false">Encode</a></li><li class="brick__action-item"><a class="brick__action" href="#" draggable="false">Decode</a></li></ul><button class="brick__title"><h3 class="brick__title-inner">Caesar cipher</h3><div class="brick__title-caret"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg></div></button><button class="brick__btn-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="2" r="1.5"></circle><circle cx="8" cy="8" r="1.5"></circle><circle cx="8" cy="14" r="1.5"></circle></svg></button></header><div class="brick__settings"><div class="form"><div class="field field-number field--first" data-width="12"><label class="field__label" for="u1">Shift</label><div class="field-number__field"><button class="field-number__btn-step-down">Step Down</button><div class="field-number__value"><input class="field-number__input" id="u1" type="number"><div class="field-number__display field-number__display--enabled"><span class="field-number__display-value">7</span><span class="field-number__display-description">a→h</span></div></div><button class="field-number__btn-step-up">Step Up</button></div></div><div class="field field-text field--first" data-width="12"><label class="field__label" for="u2">Alphabet</label><div class="field-text__field"><input class="field-text__input" id="u2" type="text" spellcheck="false"></div></div><div class="field field-enum field-enum--default field--first" data-width="6"><label class="field__label" for="u3">Case Strategy</label><div class="field-enum__field"><select class="field-enum__select" id="u3"><option value="0" title="">Maintain case</option><option value="1" title="">Ignore case</option><option value="2" title="">Strict (A ≠ a)</option></select></div></div><div class="field field-boolean" data-width="6"><label class="field__label" for="u4">Foreign Chars</label><div class="field__field"><input class="field-boolean__input" type="checkbox" id="u4"><label class="field-boolean__toggle" for="u4"><span class="field-boolean__choice">Include</span><span class="field-boolean__choice">Ignore</span></label></div></div></div></div><footer class="brick__status brick__status--forward"><div class="brick__status-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 7H3.83l3.58-3.59L6 2 0 8l6 6 1.41-1.41L3.83 9H16z"></path></svg></div><div class="brick__status-message">Encoded 163 chars</div></footer></div></div><button class="pipe__part-pipe"><div class="pipe__btn-add">Add encoder or viewer</div><div class="pipe__drop-handle"></div></button><div class="pipe__part-brick pipe__part-brick--viewer" draggable="true"><div class="brick viewer viewer-text" role="region" aria-label="Text viewer"><header class="brick__header"><ul class="brick__actions"><li class="brick__action-item"><span class="brick__action brick__action--active">View</span></li></ul><button class="brick__title"><h3 class="brick__title-inner">Ciphertext</h3><div class="brick__title-caret"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg></div></button><button class="brick__btn-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="2" r="1.5"></circle><circle cx="8" cy="8" r="1.5"></circle><circle cx="8" cy="14" r="1.5"></circle></svg></button></header><div class="brick__settings"><div class="form"></div></div><div class="brick__content"><textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;"></textarea></div><footer class="brick__status brick__status--hidden"><div class="brick__status-icon"></div><div class="brick__status-message"></div></footer></div></div><button class="pipe__part-pipe"><div class="pipe__btn-add">Add encoder or viewer</div><div class="pipe__drop-handle"></div></button></div><div class="pipe__scroll-handle pipe__scroll-handle--left pipe__scroll-handle--disabled"></div><div class="pipe__scroll-handle pipe__scroll-handle--right pipe__scroll-handle--disabled"></div></div></article>
-
-  <footer class="app__footer footer">
-    <div class="container">
-      <div class="footer__inner">
-        <h2 class="footer__brand"><a href="/">cryptii</a></h2>
-        <p class="footer__description">
-          Web app offering modular conversion, encoding and encryption online. Translations are done in the browser without any server interaction. This is an Open Source project, code licensed MIT.
-          By <a href="https://wierk.lu/" target="_blank" rel="noopener">Wierk</a>.
-        </p>
-        <ul class="footer__link-list link-list">
-          <li class="link-list__item">
-                <a class="link-list__link" href="https://ciphereditor.com/about" target="_blank" rel="noopener">
-                  About
-                </a>
-              </li><li class="link-list__item">
-                <a class="link-list__link" href="https://twitter.com/cryptii" target="_blank" rel="noopener">
-                  Twitter
-                </a>
-              </li><li class="link-list__item">
-                <a class="link-list__link" href="https://github.com/cryptii/cryptii" target="_blank" rel="noopener">
-                  GitHub
-                </a>
-              </li><li class="link-list__item">
-                <a class="link-list__link" href="https://ciphereditor.com/legal-notice" target="_blank" rel="noopener">
-                  Legal notice
-                </a>
-              </li><li class="link-list__item">
-                <a class="link-list__link" href="https://ciphereditor.com/explore/caesar-cipher?utm_campaign=cryptii_try_new_experience&amp;utm_source=cryptii&amp;utm_medium=referral" target="_blank" rel="noopener">
-                  Try ciphereditor
-                </a>
+  <div class="pipe__scrollable">
+    <div class="pipe__content">
+      <button class="pipe__part-pipe">
+        <div class="pipe__btn-add">Add encoder or viewer</div>
+        <div class="pipe__drop-handle"></div>
+      </button>
+      <div class="pipe__part-brick pipe__part-brick--viewer" draggable="true">
+        <div class="brick viewer viewer-text" role="region" aria-label="Text viewer">
+          <header class="brick__header">
+            <ul class="brick__actions">
+              <li class="brick__action-item">
+                <span class="brick__action brick__action--active">View</span>
               </li>
-        </ul>
+            </ul>
+            <button class="brick__title">
+              <h3 class="brick__title-inner">Plaintext</h3>
+              <div class="brick__title-caret">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
+              </div>
+            </button>
+            <button class="brick__btn-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="2" r="1.5"></circle><circle cx="8" cy="8" r="1.5"></circle><circle cx="8" cy="14" r="1.5"></circle></svg></button>
+            </header>
+            <div class="brick__settings">
+              <div class="form"></div>
+            </div><div class="brick__content">
+              <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;"></textarea>
+            </div>
+            <footer class="brick__status brick__status--hidden">
+              <div class="brick__status-icon"></div>
+              <div class="brick__status-message">
+              </div>
+            </footer>
+          </div>
+        </div>
+        <button class="pipe__part-pipe">
+          <div class="pipe__btn-add">Add encoder or viewer</div>
+          <div class="pipe__drop-handle">
+          </div>
+        </button>
+        <div class="pipe__part-brick pipe__part-brick--encoder" draggable="true">
+          <div class="brick encoder" role="region" aria-label="Caesar cipher encoder">
+            <header class="brick__header">
+              <!-- svelte-ignore a11y-invalid-attribute -->
+              <ul class="brick__actions">
+                <li class="brick__action-item">
+                  <!-- svelte-ignore a11y-invalid-attribute -->
+                  <a class="brick__action brick__action--active" href="#" draggable="false">Encode</a>
+                </li>
+                <li class="brick__action-item"><a class="brick__action" href="#" draggable="false">Decode</a>
+                </li>
+              </ul>
+              <button class="brick__title"><h3 class="brick__title-inner">Caesar cipher</h3>
+                <div class="brick__title-caret">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
+                </div>
+              </button>
+              <button class="brick__btn-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="2" r="1.5"></circle><circle cx="8" cy="8" r="1.5"></circle><circle cx="8" cy="14" r="1.5"></circle></svg>
+              </button>
+            </header>
+            <div class="brick__settings">
+              <div class="form">
+                <div class="field field-number field--first" data-width="12">
+                  <label class="field__label" for="u1">Shift</label>
+                  <div class="field-number__field">
+                    <button class="field-number__btn-step-down">Step Down</button>
+                    <div class="field-number__value">
+                      <input class="field-number__input" id="u1" type="number">
+                      <div class="field-number__display field-number__display--enabled">
+                        <span class="field-number__display-value">7</span>
+                        <span class="field-number__display-description">a→h</span>
+                      </div>
+                    </div>
+                    <button class="field-number__btn-step-up">Step Up</button>
+                  </div>
+                </div>
+                <div class="field field-text field--first" data-width="12">
+                  <label class="field__label" for="u2">Alphabet</label>
+                  <div class="field-text__field">
+                    <input class="field-text__input" id="u2" type="text" spellcheck="false">
+                  </div>
+                </div>
+                <div class="field field-enum field-enum--default field--first" data-width="6">
+                  <label class="field__label" for="u3">Case Strategy</label>
+                  <div class="field-enum__field">
+                    <select class="field-enum__select" id="u3">
+                      <option value="0" title="">Maintain case</option>
+                      <option value="1" title="">Ignore case</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field field-boolean" data-width="6">
+                  <label class="field__label" for="u4">Foreign Chars</label>
+                  <div class="field__field">
+                    <input class="field-boolean__input" type="checkbox" id="u4">
+                    <label class="field-boolean__toggle" for="u4"><span class="field-boolean__choice">Include</span>
+                      <span class="field-boolean__choice">Ignore</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="brick__status brick__status--forward">
+              <div class="brick__status-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 7H3.83l3.58-3.59L6 2 0 8l6 6 1.41-1.41L3.83 9H16z"></path></svg>
+              </div>
+              <div class="brick__status-message">Encoded 163 chars</div>
+            </footer>
+          </div>
+        </div>
+        <button class="pipe__part-pipe">
+          <div class="pipe__btn-add">Add encoder or viewer</div>
+          <div class="pipe__drop-handle"></div>
+        </button><div class="pipe__part-brick pipe__part-brick--viewer" draggable="true">
+          <div class="brick viewer viewer-text" role="region" aria-label="Text viewer">
+            <header class="brick__header">
+              <ul class="brick__actions">
+                <li class="brick__action-item">
+                  <span class="brick__action brick__action--active">View</span>
+                </li>
+              </ul>
+              <button class="brick__title"><h3 class="brick__title-inner">Ciphertext</h3>
+                <div class="brick__title-caret">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
+                </div>
+              </button>
+              <button class="brick__btn-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="2" r="1.5"></circle><circle cx="8" cy="8" r="1.5"></circle><circle cx="8" cy="14" r="1.5"></circle></svg>
+              </button>
+            </header>
+            <div class="brick__settings">
+              <div class="form"></div>
+            </div>
+            <div class="brick__content">
+              <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;"></textarea>
+            </div>
+            <footer class="brick__status brick__status--hidden">
+              <div class="brick__status-icon"></div>
+              <div class="brick__status-message"></div>
+            </footer>
+          </div>
+        </div>
+        <button class="pipe__part-pipe">
+          <div class="pipe__btn-add">Add encoder or viewer</div>
+          <div class="pipe__drop-handle"></div>
+        </button>
       </div>
+      <div class="pipe__scroll-handle pipe__scroll-handle--left pipe__scroll-handle--disabled"></div>
+      <div class="pipe__scroll-handle pipe__scroll-handle--right pipe__scroll-handle--disabled"></div>
     </div>
-  </footer>
+  </article>
 </div>
