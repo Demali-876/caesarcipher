@@ -557,50 +557,6 @@ img {
   }
 }
 
-
-.menu {
-  display: block;
-  visibility: hidden;
-  background: #ffffff;
-  z-index: 10;
-  max-height: 56px;
-  padding: 8px 0;
-  overflow: hidden;
-  transition-property: none;
-  transition-duration: 0.6s;
-  transition-timing-function: linear;
-}
-
-.menu__list {
-  flex-direction: column;
-}
-
-.menu__button {
-  display: block;
-  padding: 8px 16px;
-  width: 100%;
-  line-height: 24px;
-  color: #272727;
-}
-
-.menu__button:hover {
-  background: #f2f4f6;
-}
-
-.menu--visible {
-  transition-property: visibility, max-height;
-  visibility: visible;
-  max-height: 500px;
-}
-
-.featured, #carbonads {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  width: 375px;
-  margin-bottom: -4px;
-}
-
 @media screen and (min-width: 0) and (max-width: 767px) {
   .featured, #carbonads {
     margin: 0 auto -2px;
@@ -620,45 +576,6 @@ img {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
-}
-
-.featured__content, #carbonads .carbon-wrap {
-  display: flex;
-  flex-direction: row;
-}
-
-.featured__visual, #carbonads .carbon-img {
-  display: block;
-  position: relative;
-  width: 130px;
-  height: 100px;
-}
-
-.featured__visual-text {
-  display: block;
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 80%;
-}
-
-.featured__copy, #carbonads .carbon-text {
-  display: block;
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 10px 14px 0;
-  margin-bottom: 28px;
-}
-
-.featured__disclamer, #carbonads .carbon-poweredby {
-  display: block;
-  position: absolute;
-  left: 130px;
-  bottom: 0;
-  right: 0;
-  padding: 0 14px 10px;
-  color: #90999e;
 }
 
 .page__header {
@@ -924,38 +841,6 @@ img {
   img.small-on-mobile {
     width: 180px;
     height: 100px;
-  }
-}
-
-.pipe__part-collapsed {
-  display: flex;
-  flex-direction: column;
-  width: 96px;
-  padding: 4px 0;
-}
-
-@media screen and (min-width: 1000px) {
-  .pipe__part-collapsed {
-    flex-direction: row;
-    height: 96px;
-    width: auto;
-    margin: 8px 0;
-    padding: 0 4px;
-  }
-}
-
-.pipe__part-collapsed-fold {
-  width: 96px;
-  height: 8px;
-  margin: 4px 0;
-  background: #00b1d1;
-}
-
-@media screen and (min-width: 1000px) {
-  .pipe__part-collapsed-fold {
-    width: 8px;
-    height: 96px;
-    margin: 0 4px;
   }
 }
 
