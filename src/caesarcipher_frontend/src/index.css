@@ -999,11 +999,26 @@ img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
+  top: 10%;
   right: 20%;
   width: 36px;
   height: 48px;
   color: #90999e;
+}
+.brick__btn-menu-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 49%;
+  right: 25%;
+  width: 36px;
+  height: 48px;
+  color: #90999e;
+}
+
+.brick__btn-menu-mode:hover {
+  color: #00b1d1;;
 }
 
 .brick__btn-menu-canister:hover {
@@ -1151,7 +1166,6 @@ img {
   overflow: hidden;
   background: transparent;
 }
-
 
 .field {
   display: flex;

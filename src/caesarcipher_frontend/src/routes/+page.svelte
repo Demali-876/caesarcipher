@@ -6,8 +6,8 @@
   let utf8Mode = false; 
   let message = '';
   let shift = 3;
-  let foreignChar = { Exclude: null };
-  let sensitivity = { Ignore: null };
+  let foreignChar = { Include: null };
+  let sensitivity = { MaintainCase: null };
   let output = '';
   let outputLetter = 'a';
   let alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -209,8 +209,8 @@ async function decodeUTF8Message(uint8Array) {
                   </a>
                 </li>
               </ul>
-              <button class="brick__title" on:click={toggleMode}>
-                <h3 class="brick__title-inner">{utf8Mode ? 'UTF-8 Encoder' : 'Caesar Cipher'}</h3>
+              <button class="brick__title" on:click={toggleMode} on:click={clearMessage}>
+                <h3 class="brick__title-inner">{utf8Mode ? 'Mode: UTF-8 Encoder' : 'Mode: Caesar Cipher'}</h3>
                 <div class="brick__title-caret">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
                 </div>
@@ -263,8 +263,7 @@ async function decodeUTF8Message(uint8Array) {
               <div class="brick__status-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 7H3.83l3.58-3.59L6 2 0 8l6 6 1.41-1.41L3.83 9H16z"></path></svg>
               </div>
-              <div class="brick__status-message">Encoded {encodedChars} chars</div>
-              
+              <div class="brick__status-message ">Encoded {encodedChars} chars</div>
             </footer>
           </div>
         </div>
@@ -277,10 +276,11 @@ async function decodeUTF8Message(uint8Array) {
                   <span class="brick__action brick__action--active">View</span>
                 </li>
               </ul>
-              <button class="brick__title"><h3 class="brick__title-inner">{utf8Mode ? 'Decoded Text/Blob' : 'Cipher Text'}</h3>
+              <button class="brick__title">
+                <h3 class="brick__title-inner">{utf8Mode ? 'Decoded Text/Blob' : 'Cipher Text'}</h3>
               </button>
-              <button class="brick__btn-menu-canister brick__action ">
-                Canister Interface</button>
+              <a class="brick__btn-menu-canister brick__action" href="https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=kj6zg-qiaaa-aaaap-qhgwq-cai" target="_blank" rel="noopener noreferrer">
+                Canister Interface</a>
             </header>
             <div class="brick__settings">
               <div class="form"></div>
@@ -302,8 +302,8 @@ async function decodeUTF8Message(uint8Array) {
     </div>
     <header class="pipe__header">
       <div class="container">
-        <h1 class="pipe__title">Caesar Cipher: Encode and Decode Canister Service</h1>
-        <p class="pipe__description">Named after Julius Caesar, who famously utilized it for secure communications, this method forms a foundational example of cryptographic practice. The implementation of this cipher as a canister service was achieved using the Motoko programming language, leveraging its text and char libraries to handle encoding and decoding operations efficiently.</p>
+        <h1 class="pipe__title">{utf8Mode ? 'UTF-8 Encoder: Encode and Decode Canister Service' : 'Caesar Cipher: Encode and Decode Canister Service'}</h1>
+        <p class="pipe__description">{utf8Mode ? 'The advent of UTF-8 character encoding revolutionized global communication by offering a comprehensive system capable of representing virtually every written language worldwide. Its universal compatibility safeguards against data corruption, ensuring encrypted messages retain their integrity across linguistic boundaries. UTF-8 efficient variable-length encoding mechanism optimizes secure data transmission, making it an indispensable standard for preserving the confidentiality and fidelity of sensitive information.' : 'Named after Julius Caesar, who famously utilized it for secure communications, this method forms a foundational example of cryptographic practice. The implementation of this cipher as a canister service was achieved using the Motoko programming language, leveraging its text and char libraries to handle encoding and decoding operations efficiently.'}</p>
         <div class="badge">
             <a class="badge__link" href="https://internetcomputer.org/" target="_blank" rel="noopener">
               <img class="badge__image" alt="internet computer" width="196" height="56" src="logo2.svg" loading="lazy">
