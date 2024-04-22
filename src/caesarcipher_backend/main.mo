@@ -17,7 +17,6 @@ actor CaesarCipher{
     #Include;
     #Exclude;
   };
-  
   private func shift(c: Char, shift: Nat, sensitivity: CaseSensitivity): Char {
   let code = Char.toNat32(c);
   let shiftAmount = Nat32.fromNat(shift % 26);
@@ -101,7 +100,7 @@ private func unshift(c: Char, shift: Nat, sensitivity: CaseSensitivity): Char {
         sensitivity = message.sensitivity;
         foreignChar = message.foreignChar;
     };
-
+  
     let decodedText = Text.map(Message.text, func(c: Char): Char {
         if (Message.foreignChar == #Include or Char.isAlphabetic(c)) {
             return unshift(c, Message.shift, Message.sensitivity);
@@ -111,4 +110,11 @@ private func unshift(c: Char, shift: Nat, sensitivity: CaseSensitivity): Char {
     });
     return decodedText;
   };
+  public func encodeUtf8(text : Text) : async Blob {
+    return Text.encodeUtf8(text);
+  };
+  public func decodeUtf8(blob : Blob) : async ?Text {
+    return Text.decodeUtf8(blob);
+  };
+
 };

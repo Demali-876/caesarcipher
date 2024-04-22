@@ -3,7 +3,7 @@
   import { backend } from '$lib/canisters';
   import { onMount } from 'svelte';
 
-
+  let utf8Mode = false; 
   let message = '';
   let shift = 0;
   let foreignChar = { Exclude: null };
@@ -14,6 +14,16 @@
   let activeAction = 'encode';
   $: encodedChars = message.length;
 
+  $: updateOutputLetter(), shift;
+
+  onMount(() => {
+    updateOutputLetter();
+  });
+
+  function toggleMode() {
+    utf8Mode = !utf8Mode; 
+  }
+
   function updateVariantSelection(event, variantType) {
     if (variantType === 'foreignChar') {
       foreignChar = { [event.target.value]: null };
@@ -21,12 +31,12 @@
       sensitivity = { [event.target.value]: null };
     }
   }
+
   function updateOutputLetter() {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const index = (shift % 26 + 26) % 26;
     outputLetter = alphabet[index];
   }
-  $: updateOutputLetter(), shift;
+
   function stepUp() {
     shift += 1;
   }
@@ -34,15 +44,42 @@
   function stepDown() {
     shift -= 1;
   }
+
   function clearMessage() {
     message = '';
+    output ='';
   }
-  function resetControl(){
+
+  function resetControl() {
     shift = 0;
     foreignChar = { Include: null };
     sensitivity = { MaintainCase: null };
   }
+
+  function preprocessMessage() {
+    if (foreignChar.Exclude) {
+      message = message.replace(/[^a-zA-Z0-9 ]/g, ''); 
+    }
+  }
+
+  async function encodeMessageUnified() {
+    if (utf8Mode) {
+      await encodeUTF8Message();
+    } else {
+      await encodeMessage();
+    }
+  }
+
+  async function decodeMessageUnified() {
+    if (utf8Mode) {
+      await decodeInput(); // Corrected to ensure proper usage
+    } else {
+      await decodeMessage();
+    }
+  }
+
   async function encodeMessage() {
+    preprocessMessage();
     activeAction = 'encode';
     try {
       const result = await backend.encode({
@@ -59,6 +96,7 @@
   }
 
   async function decodeMessage() {
+    preprocessMessage();
     activeAction = 'decode';
     try {
       const result = await backend.decode({
@@ -73,9 +111,33 @@
       output = 'Failed to decode message.';
     }
   }
-  onMount(() => {
-    updateOutputLetter();
-  });
+
+  async function encodeUTF8Message() {
+    try {
+      const result = await backend.encodeUtf8(message);
+      output = result; 
+    } catch (error) {
+      console.error('Error encoding UTF-8 message:', error);
+      output = 'Failed to encode message in UTF-8.';
+    }
+  }
+
+  async function decodeInput() {
+    const byteArray = message.split(',').map(Number);
+    const uint8Array = new Uint8Array(byteArray);
+
+    await decodeUTF8Message(uint8Array); 
+}
+
+async function decodeUTF8Message(uint8Array) {
+    try {
+        const result = await backend.decodeUtf8(uint8Array);
+        output = result;
+    } catch (error) {
+        console.error('Error decoding UTF-8 message:', error);
+        output = 'Failed to decode message.';
+    }
+}
 </script>
 <div class="app">
   <header class="app__header header">
@@ -102,7 +164,7 @@
               </li>
             </ul>
             <button class="brick__title">
-              <h3 class="brick__title-inner">Plaintext</h3>
+              <h3 class="brick__title-inner">{utf8Mode ? 'Blob' : 'Plaintext'}</h3>
               <div class="brick__title-caret">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
               </div>
@@ -130,18 +192,18 @@
             <header class="brick__header">
               <ul class="brick__actions">
                 <li class="brick__action-item">
-                  <a href="#" class="brick__action" class:brick__action--active={activeAction === 'encode'} draggable="false" on:click={encodeMessage}>
+                  <a href="#" class="brick__action" class:brick__action--active={activeAction === 'encode'} draggable="false" on:click={encodeMessageUnified}>
                     Encode
                   </a>
                 </li>
                 <li class="brick__action-item">
-                  <a href="#" class="brick__action" class:brick__action--active={activeAction === 'decode'} draggable="false" on:click={decodeMessage}>
+                  <a href="#" class="brick__action" class:brick__action--active={activeAction === 'decode'} draggable="false" on:click={decodeMessageUnified}>
                     Decode
                   </a>
                 </li>
               </ul>
-              <button class="brick__title">
-                <h3 class="brick__title-inner">Caesar cipher</h3>
+              <button class="brick__title" on:click={toggleMode}>
+                <h3 class="brick__title-inner">{utf8Mode ? 'UTF-8 Encoder' : 'Caesar Cipher'}</h3>
                 <div class="brick__title-caret">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
                 </div>
@@ -235,8 +297,8 @@
     </div>
     <header class="pipe__header">
       <div class="container">
-        <h1 class="pipe__title">Caesar cipher: Encode and decode canister service</h1>
-        <p class="pipe__description">Method in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. The method is named after Julius Caesar, who used it in his private correspondence.</p>
+        <h1 class="pipe__title">Caesar Cipher: Encode and Decode Canister Service</h1>
+        <p class="pipe__description">Named after Julius Caesar, who famously utilized it for secure communications, this method forms a foundational example of cryptographic practice. The implementation of this cipher as a canister service was achieved using the Motoko programming language, leveraging its text and char libraries to handle encoding and decoding operations efficiently.</p>
         <div class="badge">
             <a class="badge__link" href="https://internetcomputer.org/" target="_blank" rel="noopener">
               <img class="badge__image" alt="internet computer" width="196" height="56" src="logo2.svg" loading="lazy">
@@ -247,9 +309,15 @@
               <a class="link-list__link" href="https://oajhk-xaaaa-aaaap-qca7a-cai.icp0.io/">
                 Creator
               </a>
-            </li><li class="link-list__item">
+            </li>
+            <li class="link-list__item">
               <a class="link-list__link" href="https://twitter.com/demali_icp">
                 Twitter
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a class="link-list__link" href="https://internetcomputer.org/docs/current/motoko/main/base/Text#value-encodeutf8">
+                UTF-8 Encoding
               </a>
             </li>
         </ul>

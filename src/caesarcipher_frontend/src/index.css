@@ -476,7 +476,7 @@ img {
 }
 
 .link-list__link:hover {
-  color: #00a3cc;
+  color: #00b1d1;
 }
 
 @media screen and (min-width: 0) and (max-width: 767px) {
@@ -992,7 +992,7 @@ img {
 }
 
 .brick__btn-menu:hover {
-  color: #272727;
+  color: #00b1d1;;
 }
 .brick__btn-menu-canister {
   display: flex;
@@ -1007,7 +1007,7 @@ img {
 }
 
 .brick__btn-menu-canister:hover {
-  color: #272727;
+  color: #00b1d1;;
 }
 .brick__menu {
   position: absolute;
@@ -1140,7 +1140,7 @@ img {
 }
 
 .encoder {
-  color: #ff9900;
+  color: #00b1d1;
 }
 
 .viewer-text__textarea {
