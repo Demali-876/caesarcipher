@@ -5,7 +5,7 @@
 
   let utf8Mode = false; 
   let message = '';
-  let shift = 0;
+  let shift = 3;
   let foreignChar = { Exclude: null };
   let sensitivity = { Ignore: null };
   let output = '';
@@ -51,9 +51,8 @@
   }
 
   function resetControl() {
+    utf8Mode = false;
     shift = 0;
-    foreignChar = { Include: null };
-    sensitivity = { MaintainCase: null };
   }
 
   function preprocessMessage() {
@@ -63,18 +62,28 @@
   }
 
   async function encodeMessageUnified() {
-    if (utf8Mode) {
-      await encodeUTF8Message();
-    } else {
-      await encodeMessage();
+    try {
+        if (utf8Mode) {
+            await encodeUTF8Message();
+        } else {
+            await encodeMessage();
+        }
+    } catch (error) {
+        console.error('Unified encoding error:', error);
+        output = 'Failed to encode message in unified function.';
     }
   }
 
   async function decodeMessageUnified() {
-    if (utf8Mode) {
-      await decodeInput(); // Corrected to ensure proper usage
-    } else {
-      await decodeMessage();
+    try {
+        if (utf8Mode) {
+            await decodeInput(); 
+        } else {
+            await decodeMessage();
+        }
+    } catch (error) {
+        console.error('Unified decoding error:', error);
+        output = 'Failed to decode message in unified function.';
     }
   }
 
@@ -164,10 +173,8 @@ async function decodeUTF8Message(uint8Array) {
               </li>
             </ul>
             <button class="brick__title">
-              <h3 class="brick__title-inner">{utf8Mode ? 'Blob' : 'Plaintext'}</h3>
-              <div class="brick__title-caret">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
-              </div>
+              <h3 class="brick__title-inner">{utf8Mode ? 'Text/Blob' : 'Plaintext'}</h3>
+              
             </button>
             <button class="brick__btn-menu brick__action" on:click={clearMessage}>
             Clear
@@ -176,7 +183,7 @@ async function decodeUTF8Message(uint8Array) {
             <div class="brick__settings">
               <div class="form"></div>
             </div><div class="brick__content">
-              <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;"bind:value={message}></textarea>
+              <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;"bind:value={message} placeholder={utf8Mode ? 'Enter plaintext then click encode or enter a blob example: "104,101,108,108,111" and click decode to get the text.' : 'Enter ciphertext then click decode or enter plaintext, configure your shift, case and foreign character strategy and click encode to get the ciphertext.'}></textarea>
             </div>
             <footer class="brick__status brick__status--hidden">
               <div class="brick__status-icon"></div>
@@ -257,6 +264,7 @@ async function decodeUTF8Message(uint8Array) {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 7H3.83l3.58-3.59L6 2 0 8l6 6 1.41-1.41L3.83 9H16z"></path></svg>
               </div>
               <div class="brick__status-message">Encoded {encodedChars} chars</div>
+              
             </footer>
           </div>
         </div>
@@ -269,10 +277,7 @@ async function decodeUTF8Message(uint8Array) {
                   <span class="brick__action brick__action--active">View</span>
                 </li>
               </ul>
-              <button class="brick__title"><h3 class="brick__title-inner">Ciphertext</h3>
-                <div class="brick__title-caret">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5z"></path></svg>
-                </div>
+              <button class="brick__title"><h3 class="brick__title-inner">{utf8Mode ? 'Decoded Text/Blob' : 'Cipher Text'}</h3>
               </button>
               <button class="brick__btn-menu-canister brick__action ">
                 Canister Interface</button>
@@ -281,7 +286,7 @@ async function decodeUTF8Message(uint8Array) {
               <div class="form"></div>
             </div>
             <div class="brick__content">
-              <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;">{output}</textarea>
+              <textarea class="viewer-text__textarea" aria-label="Content" spellcheck="false" style="height: 200px;" placeholder={utf8Mode ? 'Your encoded blob or decoded text will appear here.' : 'Your cipher text or plaintext will appear here.'}>{output}</textarea>
             </div>
             <footer class="brick__status brick__status--hidden">
               <div class="brick__status-icon"></div>
@@ -306,20 +311,20 @@ async function decodeUTF8Message(uint8Array) {
           </div>
         <ul class="pipe__link-list link-list">
           <li class="link-list__item">
-              <a class="link-list__link" href="https://oajhk-xaaaa-aaaap-qca7a-cai.icp0.io/">
-                Creator
-              </a>
-            </li>
-            <li class="link-list__item">
-              <a class="link-list__link" href="https://twitter.com/demali_icp">
-                Twitter
-              </a>
-            </li>
-            <li class="link-list__item">
-              <a class="link-list__link" href="https://internetcomputer.org/docs/current/motoko/main/base/Text#value-encodeutf8">
-                UTF-8 Encoding
-              </a>
-            </li>
+            <a class="link-list__link" href="https://oajhk-xaaaa-aaaap-qca7a-cai.icp0.io/" target="_blank" rel="noopener noreferrer">
+              Creator
+            </a>
+          </li>
+          <li class="link-list__item">
+            <a class="link-list__link" href="https://twitter.com/demali_icp" target="_blank" rel="noopener noreferrer">
+              Twitter
+            </a>
+          </li>
+          <li class="link-list__item">
+            <a class="link-list__link" href="https://internetcomputer.org/docs/current/motoko/main/base/Text#value-encodeutf8" target="_blank" rel="noopener noreferrer">
+              UTF-8 Encoding
+            </a>
+          </li>
         </ul>
       </div>
     </header>
